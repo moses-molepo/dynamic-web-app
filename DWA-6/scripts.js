@@ -2,8 +2,8 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable no-restricted-syntax */
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js';
-
-import { createAndAppendAuthorOptions, createAndAppendGenreOptions, setPreferredColorScheme, attachColorSchemeChangeListener, setThemeFromSelect } from './utilities.js';
+import { setPreferredColorScheme, attachColorSchemeChangeListener, setThemeFromSelect } from './colorScheme.js';
+import { createAndAppendAuthorOptions, createAndAppendGenreOptions } from './utilities.js';
 
 const themeSelect = document.querySelector('[data-settings-theme]');
 themeSelect.addEventListener('change', () => {
