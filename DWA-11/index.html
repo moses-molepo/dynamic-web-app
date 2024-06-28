@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Counter Example</title>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.2/redux.min.js"></script>
+  <script>
+    const initialState = { count: 0 };
+
+    function counterReducer(state = initialState, action) {
+      switch (action.type) {
+        case 'ADD':
+          return { count: state.count + 1 };
+        case 'SUBTRACT':
+          return { count: state.count - 1 };
+        case 'RESET':
+          return { count: 0 };
+        default:
+          return state;
+      }
+    }
+
+    function addAction() {
+      return { type: 'ADD' };
+    }
+
+    function subtractAction() {
+      return { type: 'SUBTRACT' };
+    }
+
+    function resetAction() {
+      return { type: 'RESET' };
+    }
+
+    const { createStore } = Redux;
+    const store = createStore(counterReducer);
+
+    console.log('Initial state:', store.getState());
+    store.dispatch(addAction());
+    store.dispatch(addAction());
+    console.log('State after two ADD actions:', store.getState());
+    store.dispatch(subtractAction());
+    console.log('State after SUBTRACT action:', store.getState());
+    store.dispatch(resetAction());
+    console.log('State after RESET action:', store.getState());
+  </script>
+</body>
+</html>

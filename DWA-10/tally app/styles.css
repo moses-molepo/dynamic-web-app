@@ -1,0 +1,135 @@
+:root {
+    --color-white:#ffffff;
+    --color-darkgray:#33333d;
+    --color-mediumgray:#464661;
+    --color-lightgray:#d2d6dc;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Styles for small screens (e.g., smartphones) */
+@media (max-width: 767px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .container {
+      width: 90%;
+    }
+  }
+  
+  /* Styles for medium screens (e.g., tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .container {
+      width: 80%;
+    }
+  }
+  
+  /* Styles for large screens (e.g., desktops) */
+  @media (min-width: 992px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .container {
+      width: 70%;
+    }
+  }
+  
+
+html {
+    height: 100vh;
+}
+
+body {
+    
+
+    font-family: Roboto, Arial, Helvetica, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header{
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.restart {
+    justify-content: center;
+    width: 100%;
+    border-width: 0;
+    font-size: 3rem;
+    height: 10rem;
+    border-bottom: 1px solid var(--color-lightgray);
+    align-self: center;
+}
+.restart:active {
+    
+    transform: translateY(2%);
+    transition: transform 0.2s;
+}
+
+
+
+
+.counter__value {
+    width: 100%;
+    height: 15rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 1000;
+    border-width: 0;
+    border-bottom: 1px solid var(--color-lightgray);
+    color: var(--color-white);
+    background: none;
+}
+
+.counter__actions {
+    display: flex;
+}
+
+.counter__button {
+    background: none;
+    width: 50%;
+    border-width: 0;
+  
+    font-size: 3rem;
+    height: 10rem;
+    border-bottom: 1px solid var(--color-lightgray);
+    transition: transform 0.2s;
+}
+
+.counter__button:active {
+    background-color: #6a6a76;
+    transform: translateY(2%);
+}
+.counter__button:disabled{
+    opacity: 0.2;
+}
+
+.counter__button_first{
+    border-right: 1px solid var(--color-lightgray);
+}
+
+footer {
+    padding: 0.5rem;
+}
+
+.footer__link {
+    color: #ffffff;
+}
+
